@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="css/styles.css" />
     <title>Студія</title>
   </head>
-  <body>
+  <body data-body>
     <header class="page-header">
       <div class="container header-flexbox">
         <a href="#" lang="en" class="logo header-logo"><span>Web</span>Studio</a>
@@ -54,7 +54,7 @@
       <section class="hero hero-overlay">
         <div class="container">
           <h1 class="hero-title title">Ефективні рішення для вашого бізнесу</h1>
-          <button class="hero-button" type="button">Замовити послугу</button>
+          <button class="hero-button" type="button" data-modal-open>Замовити послугу</button>
         </div>
       </section>
       <section class="benefits section">
@@ -445,12 +445,15 @@
         </div>
       </div>
     </footer>
-    <div class="backdrop is-hidden">
+    <div class="backdrop is-hidden" data-modal>
       <div class="backdrop-modal">
-        <button></button>
+        <button class="backdrop-btn" data-modal-close>
+          <svg class="close-icon">
+            <use href="./images/sprite.svg#icon-close-btn"></use>
+          </svg>
+        </button>
       </div>
     </div>
-
     <script src="./js/script.js"></script>
   </body>
 </html>
